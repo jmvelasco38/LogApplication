@@ -89,6 +89,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Model\ConsoleLogger.cs" />
+    <Compile Include="Model\DataBaseLogger.cs" />
+    <Compile Include="Model\FileLogger.cs" />
+    <Compile Include="Model\ILogger.cs" />
+    <Compile Include="Model\LoggerResponse.cs" />
     <Compile Include="Model\Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
