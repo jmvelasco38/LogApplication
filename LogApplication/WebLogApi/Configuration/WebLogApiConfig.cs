@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
+using WebLogApi.Infrastructure;
 
 namespace WebLogApi.Configuration
 {
@@ -10,6 +11,7 @@ namespace WebLogApi.Configuration
     {
         public static void Register(HttpConfiguration config)
         {
+            config.DependencyResolver = new NinjectResolver();
             // Web API routes
             config.MapHttpAttributeRoutes();
 

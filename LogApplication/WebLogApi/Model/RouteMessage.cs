@@ -6,7 +6,7 @@ using System.Web;
 
 namespace WebLogApi.Model
 {
-    public class RouteMessage
+    public class RouteMessage : IRouteMessage
     {
         private IEnumerable<ILogger> loggers;
         private IEnumerable<MessageType> messageTypes;
