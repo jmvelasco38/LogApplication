@@ -12,6 +12,9 @@ namespace WebLogApi.Model
     /// <summary>
     /// Clase que contiene los mensaje que serán enviados a través del sistema de log
     /// </summary>
+    
+    public enum LogType { Console, File, DataBase }
+    
     public class Message
     {
         /// <summary>
@@ -21,7 +24,7 @@ namespace WebLogApi.Model
         /// <summary>
         /// Indica el tipo de mensaje 
         /// </summary>
-        public MessageType LogType { get; set; }
+        public MessageType MessageType { get; set; }
         /// <summary>
         /// Indica el conteni que será almacenado en el mensaje
         /// </summary>

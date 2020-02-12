@@ -13,17 +13,17 @@ namespace WebLogApi.Model
             {
                 SetConsoleColor(message);
                 Console.WriteLine(message.Content);
-                return new LoggerResponse();
+                return new LoggerResponse(LogType.Console);
             }
             catch (Exception ex)
             {
-                return new LoggerResponse(ex);
+                return new LoggerResponse(LogType.Console, ex);
             }
         }
 
         private static void SetConsoleColor(Message message)
         {
-            switch (message.LogType)
+            switch (message.MessageType)
             {
                 case MessageType.Error:
                     Console.ForegroundColor = ConsoleColor.Red;

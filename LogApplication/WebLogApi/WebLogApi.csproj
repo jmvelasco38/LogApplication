@@ -93,8 +93,10 @@
     <Compile Include="Model\DataBaseLogger.cs" />
     <Compile Include="Model\FileLogger.cs" />
     <Compile Include="Model\ILogger.cs" />
+    <Compile Include="Model\LoggerFactory.cs" />
     <Compile Include="Model\LoggerResponse.cs" />
     <Compile Include="Model\Message.cs" />
+    <Compile Include="Model\RouteMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

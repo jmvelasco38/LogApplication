@@ -23,15 +23,15 @@ namespace WebLogApi.Model
                         CommandType = CommandType.StoredProcedure
                     };
                     cmd.Parameters.Add(new SqlParameter { ParameterName = "@@prmMessage", SqlDbType = SqlDbType.VarChar, Value = message.Content });
-                    cmd.Parameters.Add(new SqlParameter { ParameterName = "@@prmType", SqlDbType = SqlDbType.Int, Value = (int)message.LogType });
+                    cmd.Parameters.Add(new SqlParameter { ParameterName = "@@prmType", SqlDbType = SqlDbType.Int, Value = (int)message.MessageType });
                     cmd.Connection = myConnection;
                     cmd.CommandTimeout = 0;
                     cmd.ExecuteNonQuery();
-                    return new LoggerResponse();
+                    return new LoggerResponse(LogType.DataBase);
                 }
                 catch(Exception ex)
                 {
-                    return new LoggerResponse(ex);
+                    return new LoggerResponse(LogType.DataBase, ex);
                 }
                 finally
                 {

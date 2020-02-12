@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebLogApi.Model
 {
-    interface ILogger
+    public interface ILogger
     {
         LoggerResponse LogMessage(Message message);
     }

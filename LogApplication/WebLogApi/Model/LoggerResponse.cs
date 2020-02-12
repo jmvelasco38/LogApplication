@@ -11,16 +11,20 @@ namespace WebLogApi.Model
 
         public string Message { get; set; }
 
-        public LoggerResponse(Exception exception)
+        public LogType LogType { get; set; }
+
+        public LoggerResponse(LogType logType, Exception exception)
         {
             Message = string.Format("Exception: {0}, StackTrace: {1}", exception.Message, exception.StackTrace);
             Succes = false;
+            LogType = logType;
         }
 
-        public LoggerResponse()
+        public LoggerResponse(LogType logType)
         {
             Message = "The message was save";
             Succes = true;
+            LogType = logType;
         }
     }
 }

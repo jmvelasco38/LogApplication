@@ -17,11 +17,11 @@ namespace WebLogApi.Model
                 {
                     file.WriteLine(message.Content);
                 }
-                return new LoggerResponse();
+                return new LoggerResponse(LogType.File);
 
             }catch(Exception ex)
             {
-                return new LoggerResponse(ex);
+                return new LoggerResponse(LogType.File, ex);
             }
         }
 
