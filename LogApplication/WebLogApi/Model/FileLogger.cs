@@ -27,7 +27,7 @@ namespace WebLogApi.Model
 
         private StreamWriter CheckFile()
         {
-            string fileName = string.Format("{0}LogFile{1}.txt", ConfigurationManager.AppSettings["LogFileDirectory"].ToString(), DateTime.Now.ToShortDateString());
+            string fileName = string.Format("{0}{1}{2}.txt", ConfigurationManager.AppSettings["LogFileDirectory"].ToString(), ConfigurationManager.AppSettings["LogFileName"].ToString(), DateTime.Now.ToShortDateString());
             if (!File.Exists(fileName))
             {
                 File.Create(fileName);
